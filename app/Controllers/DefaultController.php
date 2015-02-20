@@ -16,11 +16,14 @@ class DefaultController
         $this->app = $app;
     }
 
-    // Example default action that renders a twig template
+    // Example default action that gets a custom service
+    // then renders a twig template
     public function indexAction()
     {
+        $message = $app['example_service']->getWelcomeMessage();
+
         return $this->app['twig']->render('home.twig', array(
-            'user' => 'some user',
+            'message' => $message,
         ));
     }
 

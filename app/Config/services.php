@@ -11,6 +11,11 @@ $app->register(new Silex\Provider\ServiceControllerServiceProvider());
 // Twig
 $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../Resources/views'));
 
+// Custom service example
+$app['example_service'] = function() {
+    return new \Services\ExampleService();
+};
+
 // Doctrine MySQL
 # $app->register(new Silex\Provider\DoctrineServiceProvider(), $app['app.db_settings']);
 
