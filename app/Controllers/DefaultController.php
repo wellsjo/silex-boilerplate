@@ -20,7 +20,7 @@ class DefaultController
     // then renders a twig template
     public function indexAction()
     {
-        $message = $app['example_service']->getWelcomeMessage();
+        $message = $this->app['example_service']->getWelcomeMessage();
 
         return $this->app['twig']->render('home.twig', array(
             'message' => $message,
