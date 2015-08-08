@@ -11,3 +11,6 @@ To use:
 ```bash
 sudo ln -s ~/path/to/Scalable-Silex-Boilerplate /var/www/
 ```
+
+##License
+MIT
